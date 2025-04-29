@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /home/opc/
+
+tar -zcvf website-backup.tar.gz website/ 

@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "content/posts/"
+ls -lat content/posts/

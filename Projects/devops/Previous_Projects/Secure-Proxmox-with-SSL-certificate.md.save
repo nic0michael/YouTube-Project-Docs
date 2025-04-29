@@ -1,0 +1,70 @@
+---
+title: "Secure Proxmox With SSL Certificate"
+date: 2025-03-23T16:48:51Z
+draft: false
+---
+
+## Duckduck DNS
+**[https://www.duckdns.org/](https://www.duckdns.org/)**
+
+Signup using Google (Zero Trust)
+
+Once you login you will find the Token
+
+Now create a  domain mydomain.duckdns.org
+
+Enter your subdomane name click on [add domain]
+
+Change current ip to server to host Nginx
+
+Click on [update ip]
+
+## Docker Installation
+Go to DockerHub **[https://hub.docker.com/](https://hub.docker.com/)**
+
+Search for : nginx-proxy-manager
+ select : jc21/nginx-proxy-manager
+
+**[https://hub.docker.com/r/jc21/nginx-proxy-manager](https://hub.docker.com/r/jc21/nginx-proxy-manager)**
+
+Docker pull command : docker pull jc21/nginx-proxy-manager
+
+Run these commands:
+```bash
+mkdir /opt/stacks/nginx-proxy -p
+
+cd /opt/stacks/nginx-proxy
+
+nano compose.yaml
+
+```
+Put this in the file:
+```yaml
+version: "3.8"
+services:
+  nginx-proxy-manager:
+    image: jc21/nginx-proxy-manager
+    container_name: nginx-proxy-manager
+    ports:
+      80:80
+      81:81
+      443:443
+    volumes:
+      ./path/to/volumes/nginx-proxy-manager/data:/data
+      /path/to/volumes/nginx-proxy-manager/letsencrypt:/etc/letsencrypt
+    restart: unless-stopped
+```
+
+Run these commands :
+```bash
+docker compose pull
+
+docker compose up -d
+
+```
+
+
+## lets Encrypt
+
+## Bibliography
+https://www.youtube.com/watch?v=acturgE4TmE

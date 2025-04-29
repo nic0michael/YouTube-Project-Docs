@@ -1,0 +1,6 @@
+#!/bin/bash
+
+hugo -D
+cp -rf public/. /var/www/html/$1/
+echo "http://rino.kozow.com/"$1/
+

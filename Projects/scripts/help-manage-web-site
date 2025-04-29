@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+echo .
+echo .
+echo "Usage: help-manage-web-site <site-folder>"
+echo .
+echo "help-manage-web-site dvp"
+echo "help-manage-web-site Orthodoxy"
+echo .
+echo "create-site my-website"
+echo "list-md-pages"
+echo "edit-md-page  my-first-blog-post.md"
+echo "web-publish dvp"
+cd /home/opc/website/$1/
+exec bash
