@@ -2,7 +2,6 @@
 ---
 title: "Our Most Popular Dockerized Apps for 2025"
 date: 2025-05-01T07:43:04Z
-draft: false
 ---
 
 These apps were chosen by my subscribers and visitors based on popularity
