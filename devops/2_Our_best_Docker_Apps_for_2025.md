@@ -110,3 +110,13 @@ Dockge is a Portainer alternative.
 ## 5. Portainer
 Portainer and Dockge are the best two Docker Management Apps
 1. They provide features not found in DockerDesktop
+
+## 6. Beszel
+- Beszel is a simple, self-hosted server monitoring tool.  
+- It shows real-time CPU, memory, and disk usage across your machines.  
+- Designed for clarity — no clutter, just essential stats.  
+- Easily deploy it with Docker Compose in seconds.  
+- Perfect for homelabs and small teams who want simple server insights.
+- Self-host App-Insights alternative for your Homelab
+
+
